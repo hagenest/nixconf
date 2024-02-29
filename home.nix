@@ -15,14 +15,27 @@
     pkgs.distrobox
     pkgs.python311Packages.osc
     pkgs.pass-wayland
+    pkgs.helix
+    pkgs.helix-gpt
 
     # desktop apps
+    
+    # messenger
     pkgs.element-desktop
     pkgs.deltachat-desktop
+    pkgs.signal-desktop
+
+    # misc
+    
     pkgs.protonvpn-gui
     pkgs.blackbox-terminal
     pkgs.freetube
-  ];
+    pkgs.logseq
+    pkgs.easyeffects
+
+    # testing some cosmic apps
+    pkgs.cosmic-term
+ ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -50,6 +63,7 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
+    enableCompletion = true;
     oh-my-zsh.enable = true;
     oh-my-zsh.plugins = [
       "git"
@@ -63,6 +77,7 @@
       "ripgrep"
       "vscode"
     ];
+    oh-my-zsh.theme = "re5et";
   }; 
 
   programs.firefox = {
@@ -77,5 +92,6 @@
     defaultCacheTtl = 1800;
     enableSshSupport = true;
   };
-}
 
+  services.ssh-agent.enable = true;
+}
