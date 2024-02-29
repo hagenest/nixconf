@@ -20,6 +20,8 @@
     pkgs.element-desktop
     pkgs.deltachat-desktop
     pkgs.protonvpn-gui
+    pkgs.blackbox-terminal
+    pkgs.freetube
   ];
 
   # This value determines the Home Manager release that your
@@ -68,11 +70,6 @@
     profiles.default = {
       bookmarks = { };
     };
-  };
-
-  programs.alacritty = {
-    enable = true;
-    settings = { };
   };
 
   services.gpg-agent = {
