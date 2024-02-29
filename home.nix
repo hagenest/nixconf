@@ -8,14 +8,18 @@
 
   # Packages that should be installed to the user profile.
   home.packages = [
+    # cli programs
     pkgs.lunarvim
     pkgs.nerdfonts
     pkgs.btop
+    pkgs.distrobox
+    pkgs.python311Packages.osc
+    pkgs.pass-wayland
+
+    # desktop apps
     pkgs.element-desktop
     pkgs.deltachat-desktop
     pkgs.protonvpn-gui
-    pkgs.distrobox
-    pkgs.python311Packages.osc
   ];
 
   # This value determines the Home Manager release that your
@@ -64,6 +68,11 @@
     profiles.default = {
       bookmarks = { };
     };
+  };
+
+  programs.alacritty = {
+    enable = true;
+    settings = { };
   };
 
   services.gpg-agent = {
