@@ -17,6 +17,7 @@
     pkgs.pass-wayland
     pkgs.helix
     pkgs.helix-gpt
+    pkgs.neofetch
 
     # desktop apps
     
