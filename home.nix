@@ -78,8 +78,12 @@
     enable = true;
     extensions = [
       pkgs.vscode-extensions.ms-python.python
+      pkgs.vscode-extensions.ms-python.vscode-pylance
+      pkgs.vscode-extensions.ms-toolsai.jupyter
+      pkgs.vscode-extensions.ms-python.isort
       pkgs.vscode-extensions.rust-lang.rust-analyzer
       pkgs.vscode-extensions.github.copilot
+      pkgs.vscode-extensions.github.copilot-chat
       pkgs.vscode-extensions.bbenoist.nix
     ];
     mutableExtensionsDir = false; # forbid installation of extensions without nix
