@@ -18,6 +18,14 @@
     pkgs.helix
     pkgs.helix-gpt
     pkgs.neofetch
+    pkgs.sequoia-sq
+    pkgs.sequoia-chameleon-gnupg # can't use this via cli, not sure why
+    pkgs.rclone
+    pkgs.gnupg # so Werner Koch was right all along, I guess
+
+    # language toolchains
+    pkgs.cargo
+    pkgs.poetry
 
     # desktop apps
     
@@ -26,16 +34,21 @@
     pkgs.deltachat-desktop
     pkgs.signal-desktop
 
-    # misc
-    
+    # misc    
     pkgs.protonvpn-gui
     pkgs.blackbox-terminal
     pkgs.freetube
     pkgs.logseq
     pkgs.easyeffects
+    pkgs.popcorntime
+    pkgs.obsidian
+    pkgs.rclone-browser
+    pkgs.kdePackages.akregator
 
     # testing some cosmic apps
     pkgs.cosmic-term
+    pkgs.cosmic-files
+    pkgs.cosmic-design-demo
  ];
 
   # This value determines the Home Manager release that your
@@ -61,6 +74,17 @@
 
   programs.gitui.enable = true;
 
+  programs.vscode = {
+    enable = true;
+    extensions = [
+      pkgs.vscode-extensions.ms-python.python
+      pkgs.vscode-extensions.rust-lang.rust-analyzer
+      pkgs.vscode-extensions.github.copilot
+      pkgs.vscode-extensions.bbenoist.nix
+    ];
+    mutableExtensionsDir = false; # forbid installation of extensions without nix
+  };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -81,11 +105,21 @@
     oh-my-zsh.theme = "re5et";
   }; 
 
+  programs.nushell = {
+    enable = true;
+  };
+
   programs.firefox = {
     enable = true;
     profiles.default = {
       bookmarks = { };
     };
+  };
+
+  programs.tealdeer = {
+    enable = true;
+    settings.updates.auto_update = true;
+    settings.updates.auto_update_interval_hours = 12;
   };
 
   services.gpg-agent = {
