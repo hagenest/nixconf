@@ -13,6 +13,7 @@
     pkgs.nerdfonts
     pkgs.btop
     pkgs.distrobox
+    pkgs.podman
     pkgs.python311Packages.osc
     pkgs.pass-wayland
     pkgs.helix
@@ -22,13 +23,28 @@
     pkgs.sequoia-chameleon-gnupg # can't use this via cli, not sure why
     pkgs.rclone
     pkgs.gnupg # so Werner Koch was right all along, I guess
+    pkgs.kdePackages.plasma-browser-integration
+    pkgs.openssl
+    pkgs.nixfmt
+    pkgs.zerotierone # p2p vpn thingy for work
 
     # language toolchains
     pkgs.cargo
-    pkgs.poetry
+    pkgs.poetry # TODO find out how to use poetry2nix
+
+    # python packages
+    pkgs.python3
+    pkgs.python311Packages.pip
+    pkgs.pyinfra
+
+    # random dependencies
+    pkgs.stdenv.cc.cc.lib # this is needed for some pip-packages, doesn't work tho
 
     # desktop apps
-    
+
+    # DE stuff
+    pkgs.latte-dock
+
     # messenger
     pkgs.element-desktop
     pkgs.deltachat-desktop
@@ -44,11 +60,14 @@
     pkgs.obsidian
     pkgs.rclone-browser
     pkgs.kdePackages.akregator
+    pkgs.libreoffice
+    pkgs.thunderbird
 
     # testing some cosmic apps
     pkgs.cosmic-term
     pkgs.cosmic-files
     pkgs.cosmic-design-demo
+    # wow, they really aren't all that great yet
  ];
 
   # This value determines the Home Manager release that your
@@ -70,6 +89,14 @@
     ignores = [ ".vscode" ".DS_STORE" ".idea" ];
     userEmail = "mail@hagenet.dev";
     userName = "Christian Hagenest";
+    extraConfig = {
+      pull = {
+        rebase = true;
+      };
+      rebase = {
+        autoStash = true;
+      };
+    };
   };
 
   programs.gitui.enable = true;
