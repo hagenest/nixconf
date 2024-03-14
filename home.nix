@@ -40,6 +40,10 @@
     # random dependencies
     pkgs.stdenv.cc.cc.lib # this is needed for some pip-packages, doesn't work tho
 
+    # 3d printer
+    pkgs.prusa-slicer
+    pkgs.printrun
+
     # desktop apps
 
     # DE stuff
