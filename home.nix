@@ -27,6 +27,7 @@
     pkgs.openssl
     pkgs.nixfmt
     pkgs.zerotierone # p2p vpn thingy for work
+    pkgs.ripgrep
 
     # language toolchains
     pkgs.cargo
@@ -53,6 +54,7 @@
     pkgs.element-desktop
     pkgs.deltachat-desktop
     pkgs.signal-desktop
+    pkgs.kdeltachat
 
     # misc    
     pkgs.protonvpn-gui

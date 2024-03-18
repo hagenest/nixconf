@@ -49,7 +49,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
+  # Enable the Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma6.enable = true;
 
@@ -89,7 +89,7 @@
   users.users.hagi = {
     isNormalUser = true;
     description = "hagi";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "osc"];
     packages = with pkgs; [
       firefox
     #  thunderbird
