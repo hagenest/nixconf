@@ -57,18 +57,21 @@
     pkgs.signal-desktop
     pkgs.kdeltachat
 
+    # office-related stuff
+    pkgs.libreoffice
+    pkgs.obsidian
+    pkgs.appflowy
+    pkgs.logseq
+    pkgs.thunderbird
+
     # misc    
     pkgs.protonvpn-gui
     pkgs.blackbox-terminal
     pkgs.freetube
-    pkgs.logseq
     pkgs.easyeffects
     pkgs.popcorntime
-    pkgs.obsidian
     pkgs.rclone-browser
     pkgs.kdePackages.akregator
-    pkgs.libreoffice
-    pkgs.thunderbird
 
     # testing some cosmic apps
     pkgs.cosmic-term
