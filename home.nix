@@ -28,10 +28,11 @@
     pkgs.nixfmt
     pkgs.zerotierone # p2p vpn thingy for work
     pkgs.ripgrep
-
+    
     # language toolchains
     pkgs.cargo
     pkgs.poetry # TODO find out how to use poetry2nix
+    pkgs.gcc # needed for cargo 
 
     # python packages
     pkgs.python3
