@@ -38,6 +38,8 @@
     pkgs.python3
     pkgs.python311Packages.pip
     pkgs.pyinfra
+    pkgs.python311Packages.matplotlib
+    pkgs.python311Packages.pandas
 
     # random dependencies
     pkgs.stdenv.cc.cc.lib # this is needed for some pip-packages, doesn't work tho
@@ -56,6 +58,7 @@
     pkgs.deltachat-desktop
     pkgs.signal-desktop
     pkgs.kdeltachat
+    pkgs.neochat
 
     # office-related stuff
     pkgs.libreoffice
@@ -72,6 +75,7 @@
     pkgs.popcorntime
     pkgs.rclone-browser
     pkgs.kdePackages.akregator
+    pkgs.metasploit
 
     # testing some cosmic apps
     pkgs.cosmic-term
@@ -97,7 +101,7 @@
     enable = true;
     delta.enable = true; # enable delta syntax highlighter
     ignores = [ ".vscode" ".DS_STORE" ".idea" ];
-    userEmail = "mail@hagenet.dev";
+    userEmail = "mail@hagenest.dev";
     userName = "Christian Hagenest";
     extraConfig = {
       pull = {
