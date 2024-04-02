@@ -50,9 +50,6 @@
 
     # desktop apps
 
-    # DE stuff
-    pkgs.latte-dock
-
     # messenger
     pkgs.element-desktop
     pkgs.deltachat-desktop
@@ -132,7 +129,7 @@
 
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     oh-my-zsh.enable = true;
     oh-my-zsh.plugins = [
