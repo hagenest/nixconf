@@ -73,6 +73,7 @@
     pkgs.rclone-browser
     pkgs.kdePackages.akregator
     pkgs.metasploit
+    pkgs.kdePackages.kleopatra
 
     # testing some cosmic apps
     pkgs.cosmic-term
