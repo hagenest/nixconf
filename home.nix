@@ -28,6 +28,8 @@
     pkgs.nixfmt
     pkgs.zerotierone # p2p vpn thingy for work
     pkgs.ripgrep
+    pkgs.nix-tree
+    pkgs.hugo
     
     # language toolchains
     pkgs.cargo
