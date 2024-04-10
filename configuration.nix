@@ -138,6 +138,12 @@
     ];
   };
   environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; }; # Force intel-media-driver
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+   enable = true;
+   pinentryPackage = pkgs.pinentry-curses;
+   enableSSHSupport = true;
+  };
 
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -19,10 +19,7 @@
     pkgs.helix
     pkgs.helix-gpt
     pkgs.neofetch
-    pkgs.sequoia-sq
-    pkgs.sequoia-chameleon-gnupg # can't use this via cli, not sure why
     pkgs.rclone
-    pkgs.gnupg # so Werner Koch was right all along, I guess
     pkgs.kdePackages.plasma-browser-integration
     pkgs.openssl
     pkgs.nixfmt
@@ -30,6 +27,11 @@
     pkgs.ripgrep
     pkgs.nix-tree
     pkgs.hugo
+
+    # gpg related stuff
+    pkgs.sequoia-sq
+    pkgs.sequoia-chameleon-gnupg # can't use this via cli, not sure why
+    pkgs.gnupg # so Werner Koch was right all along, I guess
     
     # language toolchains
     pkgs.cargo
@@ -76,6 +78,7 @@
     pkgs.kdePackages.akregator
     pkgs.metasploit
     pkgs.kdePackages.kleopatra
+    pkgs.tor-browser
 
     # testing some cosmic apps
     pkgs.cosmic-term
