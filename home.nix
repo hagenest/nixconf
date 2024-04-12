@@ -27,6 +27,7 @@
     pkgs.ripgrep
     pkgs.nix-tree
     pkgs.hugo
+    pkgs.android-tools
 
     # gpg related stuff
     pkgs.sequoia-sq
