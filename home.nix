@@ -48,6 +48,7 @@
 
     # random dependencies
     pkgs.stdenv.cc.cc.lib # this is needed for some pip-packages, doesn't work tho
+    pkgs.gtop # for tophat gnome extension
 
     # 3d printer
     pkgs.prusa-slicer
@@ -65,7 +66,6 @@
     # office-related stuff
     pkgs.libreoffice
     pkgs.obsidian
-    pkgs.appflowy
     pkgs.logseq
     pkgs.thunderbird
 
@@ -86,7 +86,14 @@
     pkgs.cosmic-files
     pkgs.cosmic-design-demo
     # wow, they really aren't all that great yet
- ];
+
+    # Gnome Extensions
+    pkgs.gnomeExtensions.appindicator
+    pkgs.gnomeExtensions.tophat
+    pkgs.gnomeExtensions.pop-shell
+    pkgs.gnomeExtensions.teatimer
+    pkgs.gnomeExtensions.caffeine
+    ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -115,6 +122,13 @@
         autoStash = true;
       };
     };
+  };
+
+  # Dconf settings
+  dconf = {
+    enable = true;
+    # dark mode default
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
   };
 
   programs.gitui.enable = true;
