@@ -33,11 +33,11 @@
     pkgs.sequoia-sq
     pkgs.sequoia-chameleon-gnupg # can't use this via cli, not sure why
     pkgs.gnupg # so Werner Koch was right all along, I guess
-    
+
     # language toolchains
     pkgs.cargo
     pkgs.poetry # TODO find out how to use poetry2nix
-    pkgs.gcc # needed for cargo 
+    pkgs.gcc # needed for cargo
 
     # python packages
     pkgs.python3
@@ -93,7 +93,7 @@
     pkgs.gnomeExtensions.pop-shell
     pkgs.gnomeExtensions.teatimer
     pkgs.gnomeExtensions.caffeine
-    ];
+  ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -115,12 +115,8 @@
     userEmail = "mail@hagenest.dev";
     userName = "Christian Hagenest";
     extraConfig = {
-      pull = {
-        rebase = true;
-      };
-      rebase = {
-        autoStash = true;
-      };
+      pull = { rebase = true; };
+      rebase = { autoStash = true; };
     };
   };
 
@@ -145,7 +141,8 @@
       pkgs.vscode-extensions.github.copilot-chat
       pkgs.vscode-extensions.bbenoist.nix
     ];
-    mutableExtensionsDir = false; # forbid installation of extensions without nix
+    mutableExtensionsDir =
+      false; # forbid installation of extensions without nix
   };
 
   programs.zsh = {
@@ -166,17 +163,13 @@
       "vscode"
     ];
     oh-my-zsh.theme = "re5et";
-  }; 
-
-  programs.nushell = {
-    enable = true;
   };
+
+  programs.nushell = { enable = true; };
 
   programs.firefox = {
     enable = true;
-    profiles.default = {
-      bookmarks = { };
-    };
+    profiles.default = { bookmarks = { }; };
   };
 
   programs.tealdeer = {

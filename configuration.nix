@@ -5,16 +5,16 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-533df092-a9cc-4f83-9fdf-8e8b63c9e707".device = "/dev/disk/by-uuid/533df092-a9cc-4f83-9fdf-8e8b63c9e707";
+  boot.initrd.luks.devices."luks-533df092-a9cc-4f83-9fdf-8e8b63c9e707".device =
+    "/dev/disk/by-uuid/533df092-a9cc-4f83-9fdf-8e8b63c9e707";
   networking.hostName = "hagi-7480-nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -54,9 +54,7 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Don't install these Gnome Default Packages
-  environment.gnome.excludePackages = (with pkgs; [
-  gnome-tour
-  ]);
+  environment.gnome.excludePackages = (with pkgs; [ gnome-tour ]);
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -71,7 +69,8 @@
   services.printing.enable = true;
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  hardware.bluetooth.powerOnBoot =
+    true; # powers up the default Bluetooth controller on boot
 
   # thunderbolt daemon
   services.hardware.bolt.enable = true;
@@ -100,12 +99,13 @@
   users.users.hagi = {
     isNormalUser = true;
     description = "hagi";
-    extraGroups = [ "networkmanager" "wheel" "osc"];
-    packages = with pkgs; [
-      firefox
-    #  kdePackages.plasma-thunderbolt
-    #  thunderbird
-    ];
+    extraGroups = [ "networkmanager" "wheel" "osc" ];
+    packages = with pkgs;
+      [
+        firefox
+        #  kdePackages.plasma-thunderbolt
+        #  thunderbird
+      ];
   };
 
   # Enable automatic login for the user.
@@ -124,15 +124,17 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      #  wget
+    ];
 
   environment.pathsToLink = [ "/share/zsh" ]; # for zsh completion
 
   nixpkgs.config.packageOverrides = pkgs: {
-    intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
+    intel-vaapi-driver =
+      pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
   };
   hardware.opengl = {
     enable = true;
@@ -142,12 +144,14 @@
       libvdpau-va-gl
     ];
   };
-  environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; }; # Force intel-media-driver
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  }; # Force intel-media-driver
   services.pcscd.enable = true;
   programs.gnupg.agent = {
-   enable = true;
-   pinentryPackage = pkgs.pinentry-curses;
-   enableSSHSupport = true;
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
+    enableSSHSupport = true;
   };
 
   # Gnome settings daemon
