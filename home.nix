@@ -35,9 +35,10 @@
     pkgs.gnupg # so Werner Koch was right all along, I guess
 
     # language toolchains
-    pkgs.cargo
+    pkgs.rustup
     pkgs.poetry # TODO find out how to use poetry2nix
     pkgs.gcc # needed for cargo
+    pkgs.nodejs_21 # you gotta do, what you gotta do
 
     # python packages
     pkgs.python3
