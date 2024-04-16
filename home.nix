@@ -80,6 +80,7 @@
     pkgs.metasploit
     pkgs.kdePackages.kleopatra
     pkgs.tor-browser
+    pkgs.chromium
 
     # testing some cosmic apps
     pkgs.cosmic-term
