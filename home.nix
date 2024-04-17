@@ -83,6 +83,9 @@
     pkgs.tor-browser
     pkgs.chromium
 
+    # games
+    pkgs.openttd
+
     # testing some cosmic apps
     pkgs.cosmic-term
     pkgs.cosmic-files
