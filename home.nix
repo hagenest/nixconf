@@ -54,6 +54,7 @@
     # 3d printer
     pkgs.prusa-slicer
     pkgs.printrun
+    pkgs.cura # proprietary slicer
 
     # desktop apps
 
@@ -69,6 +70,7 @@
     pkgs.obsidian
     pkgs.logseq
     pkgs.thunderbird
+    pkgs.rnote # foss pen note taking app
 
     # misc    
     pkgs.protonvpn-gui
@@ -122,6 +124,8 @@
     extraConfig = {
       pull = { rebase = true; };
       rebase = { autoStash = true; };
+      push = { autoSetupRemote = true; };
+      init = { defaultBranch = "main"; };
     };
   };
 
