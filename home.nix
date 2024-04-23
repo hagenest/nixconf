@@ -64,6 +64,7 @@
     pkgs.signal-desktop
     pkgs.kdeltachat
     pkgs.neochat
+    pkgs.fractal
 
     # office-related stuff
     pkgs.libreoffice
