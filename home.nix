@@ -56,6 +56,9 @@
     pkgs.printrun
     pkgs.cura # proprietary slicer
 
+    # awesome nix stuff
+    pkgs.colmena
+
     # desktop apps
 
     # messenger
@@ -73,7 +76,7 @@
     pkgs.thunderbird
     pkgs.rnote # foss pen note taking app
 
-    # misc    
+    # misc
     pkgs.protonvpn-gui
     pkgs.blackbox-terminal
     pkgs.freetube
