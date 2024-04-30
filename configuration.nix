@@ -111,6 +111,9 @@
       ];
   };
 
+  # add wheel and root to trusted users of nix store, needed for e.g. devenv.sh
+  nix.settings.trusted-users = [ "root" "@wheel" ];
+
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "hagi";
