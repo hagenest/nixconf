@@ -36,6 +36,7 @@
     pkgs.gnupg # so Werner Koch was right all along, I guess
 
     # language toolchains
+    pkgs.devenv # declare devenv in nix
     pkgs.rustup
     pkgs.poetry # TODO find out how to use poetry2nix
     pkgs.gcc # needed for cargo
