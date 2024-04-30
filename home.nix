@@ -19,6 +19,7 @@
     pkgs.helix
     pkgs.helix-gpt
     pkgs.neofetch
+    pkgs.nerdfetch
     pkgs.rclone
     pkgs.kdePackages.plasma-browser-integration
     pkgs.openssl
@@ -57,7 +58,7 @@
     pkgs.cura # proprietary slicer
 
     # awesome nix stuff
-    pkgs.colmena
+    pkgs.colmena # actually nixos-rebuild does everything I need, but I'll keep this anyways
 
     # desktop apps
 
