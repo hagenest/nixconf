@@ -90,6 +90,7 @@
     pkgs.kdePackages.kleopatra
     pkgs.tor-browser
     pkgs.chromium
+    pkgs.gitkraken # I'm not proud to sometimes need this
 
     # games
     pkgs.openttd
