@@ -18,7 +18,7 @@
 
   boot.initrd.luks.devices."luks-533df092-a9cc-4f83-9fdf-8e8b63c9e707".device =
     "/dev/disk/by-uuid/533df092-a9cc-4f83-9fdf-8e8b63c9e707";
-  networking.hostName = "hagi-7480-nixos"; # Define your hostname.
+  networking.hostName = "hagi-7480-auxolotl"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
