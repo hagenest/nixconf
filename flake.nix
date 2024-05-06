@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration";
+  description = "AuxOS configuration";
 
   inputs = {
     nixpkgs.url = "github:auxolotl/nixpkgs/nixpkgs-unstable";

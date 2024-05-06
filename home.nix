@@ -29,6 +29,7 @@
     pkgs.nix-tree
     pkgs.hugo
     pkgs.android-tools
+    pkgs.wget
 
     # gpg related stuff
     pkgs.sequoia-sq
