@@ -30,6 +30,7 @@
     pkgs.hugo
     pkgs.android-tools
     pkgs.wget
+    pkgs.quickemu # spin up vms fast @wimpy
 
     # gpg related stuff
     pkgs.sequoia-sq
@@ -42,6 +43,9 @@
     pkgs.poetry # TODO find out how to use poetry2nix
     pkgs.gcc # needed for cargo
     pkgs.nodejs_18 # you gotta do, what you gotta do
+
+    # development stuff
+    pkgs.debian-devscripts
 
     # python packages
     pkgs.python3
@@ -78,6 +82,7 @@
     pkgs.logseq
     pkgs.thunderbird
     pkgs.rnote # foss pen note taking app
+    pkgs.foliate # e-reader
 
     # misc
     pkgs.protonvpn-gui
@@ -108,6 +113,7 @@
     pkgs.gnomeExtensions.pop-shell
     pkgs.gnomeExtensions.teatimer
     pkgs.gnomeExtensions.caffeine
+    pkgs.gnomeExtensions.just-perfection
   ];
 
   # This value determines the Home Manager release that your
