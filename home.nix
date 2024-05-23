@@ -100,6 +100,7 @@
 
     # games
     pkgs.openttd
+    pkgs.lutris
 
     # testing some cosmic apps
     pkgs.cosmic-term
