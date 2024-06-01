@@ -31,6 +31,7 @@
     pkgs.android-tools
     pkgs.wget
     pkgs.quickemu # spin up vms fast @wimpy
+    pkgs.lazygit
 
     # gpg related stuff
     pkgs.sequoia-sq
