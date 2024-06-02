@@ -113,6 +113,7 @@
     pkgs.gnomeExtensions.teatimer
     pkgs.gnomeExtensions.caffeine
     pkgs.gnomeExtensions.just-perfection
+    pkgs.gnomeExtensions.media-controls
   ];
 
   # This value determines the Home Manager release that your
