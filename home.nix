@@ -21,7 +21,6 @@
     pkgs.neofetch
     pkgs.nerdfetch
     pkgs.rclone
-    pkgs.kdePackages.plasma-browser-integration
     pkgs.openssl
     pkgs.nixfmt
     pkgs.zerotierone # p2p vpn thingy for work
@@ -92,7 +91,6 @@
     pkgs.easyeffects
     pkgs.popcorntime
     pkgs.rclone-browser
-    pkgs.kdePackages.akregator
     pkgs.metasploit
     pkgs.kdePackages.kleopatra
     pkgs.tor-browser
@@ -101,7 +99,6 @@
 
     # games
     pkgs.openttd
-    pkgs.lutris
 
     # testing some cosmic apps
     pkgs.cosmic-term
@@ -151,8 +148,6 @@
     # dark mode default
     settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
   };
-
-  programs.gitui.enable = true;
 
   programs.vscode = {
     enable = true;
