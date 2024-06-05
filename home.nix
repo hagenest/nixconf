@@ -100,6 +100,9 @@
     # games
     pkgs.openttd
 
+    # wine
+    pkgs.bottles
+
     # testing some cosmic apps
     pkgs.cosmic-term
     pkgs.cosmic-files
