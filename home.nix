@@ -96,6 +96,7 @@
     pkgs.tor-browser
     pkgs.chromium
     pkgs.gitkraken # I'm not proud to sometimes need this
+    pkgs.gnome.gnome-tweaks
 
     # games
     pkgs.openttd
