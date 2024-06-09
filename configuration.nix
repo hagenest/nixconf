@@ -162,6 +162,7 @@
 
   # Gnome settings daemon
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  security.pam.services.hagi.enableGnomeKeyring = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

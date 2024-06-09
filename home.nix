@@ -97,6 +97,7 @@
     pkgs.chromium
     pkgs.gitkraken # I'm not proud to sometimes need this
     pkgs.gnome.gnome-tweaks
+    pkgs.spotube
 
     # games
     pkgs.openttd
