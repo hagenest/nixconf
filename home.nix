@@ -78,7 +78,7 @@
 
     # office-related stuff
     pkgs.libreoffice
-    pkgs.obsidian
+    # pkgs.obsidian
     pkgs.logseq
     pkgs.thunderbird
     pkgs.rnote # foss pen note taking app
@@ -98,6 +98,7 @@
     pkgs.gitkraken # I'm not proud to sometimes need this
     pkgs.gnome.gnome-tweaks
     pkgs.spotube
+    pkgs.sqlitebrowser
 
     # games
     pkgs.openttd
