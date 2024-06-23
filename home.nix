@@ -83,6 +83,7 @@
     pkgs.thunderbird
     pkgs.rnote # foss pen note taking app
     pkgs.foliate # e-reader
+    pkgs.marp-cli
 
     # misc
     pkgs.protonvpn-gui
