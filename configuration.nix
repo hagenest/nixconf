@@ -164,7 +164,7 @@
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   security.pam.services.hagi.enableGnomeKeyring = true;
 
-  nixpkgs.config.permittedInsecurePackages = [ "electron" ];
+  nixpkgs.config.permittedInsecurePackages = [ "electron-28.3.3" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
