@@ -53,6 +53,7 @@
     pkgs.pyinfra
     pkgs.python311Packages.matplotlib
     pkgs.python311Packages.pandas
+    pkgs.ruff # python linter
 
     # random dependencies
     pkgs.stdenv.cc.cc.lib # this is needed for some pip-packages, doesn't work tho
