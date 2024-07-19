@@ -50,10 +50,10 @@
     # python packages
     pkgs.python3
     pkgs.python311Packages.pip
-    pkgs.pyinfra
+    # pkgs.pyinfra
     pkgs.python311Packages.matplotlib
-    pkgs.python311Packages.pandas
-    pkgs.ruff # python linter
+    # pkgs.python311Packages.pandas
+    # pkgs.ruff # python linter
 
     # random dependencies
     pkgs.stdenv.cc.cc.lib # this is needed for some pip-packages, doesn't work tho
@@ -61,8 +61,8 @@
 
     # 3d printer
     pkgs.prusa-slicer
-    pkgs.printrun
-    pkgs.cura # proprietary slicer
+    # pkgs.printrun # commented out bc it's broken on unstable, bc of wxpython and python312
+    # pkgs.cura # proprietary slicer
 
     # awesome nix stuff
     pkgs.colmena # actually nixos-rebuild does everything I need, but I'll keep this anyways
@@ -91,7 +91,7 @@
     pkgs.blackbox-terminal
     pkgs.freetube
     pkgs.easyeffects
-    pkgs.popcorntime
+    # pkgs.popcorntime
     pkgs.rclone-browser
     pkgs.metasploit
     pkgs.kdePackages.kleopatra

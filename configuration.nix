@@ -79,7 +79,6 @@
   services.hardware.bolt.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -164,7 +163,7 @@
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   security.pam.services.hagi.enableGnomeKeyring = true;
 
-  nixpkgs.config.permittedInsecurePackages = [ "electron-28.3.3" ];
+  nixpkgs.config.permittedInsecurePackages = [ "electron-28.3.3" "electron-27.3.11" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
