@@ -54,6 +54,7 @@
     pkgs.python311Packages.matplotlib
     # pkgs.python311Packages.pandas
     # pkgs.ruff # python linter
+    pkgs.ardour
 
     # random dependencies
     pkgs.stdenv.cc.cc.lib # this is needed for some pip-packages, doesn't work tho
@@ -107,6 +108,7 @@
 
     # wine
     pkgs.bottles
+    pkgs.lutris
 
     # testing some cosmic apps
     pkgs.cosmic-term
